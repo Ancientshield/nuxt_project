@@ -1,9 +1,11 @@
 <template>
 	<UApp>
 		<UContainer>
-			<UNavigationMenu :items="menuItems" class="justify-center py-2" />
+			<UNavigationMenu :items="menuItems" class="justify-center" />
 		</UContainer>
-		<NuxtPage />
+		<UContainer>
+			<NuxtPage />
+		</UContainer>
 	</UApp>
 </template>
 
