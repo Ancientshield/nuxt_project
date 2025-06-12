@@ -1,4 +1,6 @@
 <script setup lang="ts">
+	const config = useRuntimeConfig();
+	const apiKey = config.public.OMDB_API_KEY;
 	const query = ref('');
 	interface IMovies {
 		Title: string;
@@ -10,7 +12,7 @@
 	const movies = ref<IMovies[]>([]);
 	const searchMovieById = async () => {
 		const response: { Search?: IMovies[] } = await $fetch(
-			`http://www.omdbapi.com/?apikey=${}&s=${query.value}`
+			`http://www.omdbapi.com/?apikey=${apiKey}&s=${query.value}`
 		);
 		movies.value = response.Search || [];
 	};
