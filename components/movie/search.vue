@@ -12,7 +12,7 @@
 	const movies = ref<IMovies[]>([]);
 	const searchMovieById = async () => {
 		const response: { Search?: IMovies[] } = await $fetch(
-			`http://www.omdbapi.com/?apikey=517c97ac&s=${query.value}`
+			`https://www.omdbapi.com/?apikey=517c97ac&s=${query.value}`
 		);
 		movies.value = response.Search || [];
 	};
