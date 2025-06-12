@@ -1,7 +1,7 @@
 <template>
 	<UApp>
 		<UContainer>
-			<UNavigationMenu :items="menuItems" />
+			<UNavigationMenu :items="menuItems" class="justify-center py-2" />
 		</UContainer>
 		<NuxtPage />
 	</UApp>
@@ -13,3 +13,5 @@
 		{ label: 'Movies', to: '/movies' },
 	];
 </script>
+
+<style scoped></style>
