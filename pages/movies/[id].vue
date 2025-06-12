@@ -36,7 +36,7 @@
 	// 使用 useFetch 請求 OMDB API
 	// console.log('route.params.id', route.params.id);
 	const { data } = await useFetch<OmdbMovie>(
-		`https://www.omdbapi.com/?apikey=517c97ac&i=${route.params.id}`,
+		`https://www.omdbapi.com/?apikey=${apiKey}&i=${route.params.id}`,
 		{
 			key: `/movies/${route.params.id}`, // 使用路由參數作為緩存鍵
 			onResponse({ response }) {
