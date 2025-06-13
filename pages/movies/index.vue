@@ -9,8 +9,10 @@
 			</UCard>
 		</div>
 		<div v-else>
-			<p class="text-gray-600">Search for your favorite movies</p>
-			<MovieSearch />
+			<div class="flex flex-col items-center">
+				<p class="text-gray-600">Search for your favorite movies</p>
+				<MovieSearch />
+			</div>
 		</div>
 	</div>
 </template>
