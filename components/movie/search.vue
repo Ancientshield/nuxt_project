@@ -20,9 +20,12 @@
 
 <template>
 	<div>
-		<form @submit.prevent="searchMovieById">
-			<UInput v-model="query" class="m-3" type="text" />
-			<UButton @click="searchMovieById">Search</UButton>
+		<form
+			class="flex items-center justify-center mb-8"
+			@submit.prevent="searchMovieById"
+		>
+			<UInput v-model="query" class="m-1" type="text" />
+			<UButton class="ml-1" @click="searchMovieById">Search</UButton>
 		</form>
 		<ul class="flex flex-wrap gap-10 list-none">
 			<li v-for="movie in movies" :key="movie.imdbID">
